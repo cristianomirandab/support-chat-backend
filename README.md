@@ -24,7 +24,7 @@ GET /openapi/v1.json
 | ------ | ---------------- | -------------------------- |
 | POST   | /chats           | Creates a chat session     |
 | GET    | /chats/{id}      | Retrieves chat status      |
-| GET    | /chats/{id}/poll | Client polling (heartbeat) |
+| POST    | /chats/{id}/poll | Client polling (heartbeat) |
 
 
 Test scripts

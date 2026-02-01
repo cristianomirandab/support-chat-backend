@@ -52,15 +52,14 @@ public sealed class ChatsController : ControllerBase
         });
     }
 
-    [HttpGet("{id:guid}/poll")]
+    [HttpPost("{id:guid}/poll")]
     public IActionResult Poll(Guid id)
     {
         if (!_chats.TryGet(id, out var chat) || chat is null)
             return NotFound();
 
         chat.LastPollAt = _clock.UtcNow;
-
-        // First client poll after being assigned marks the chat as Active.
+                
         if (chat.Status == ChatStatus.Assigned)
             chat.Status = ChatStatus.Active;
 
