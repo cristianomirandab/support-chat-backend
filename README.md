@@ -31,9 +31,9 @@ Test scripts
 
 The project includes two PowerShell scripts to validate the requirements:
 
-scripts/
- -> test.ps1      # main automated tests
- -> rr_test.ps1   # isolated Round Robin test
+scripts:
+ - test.ps1      # main automated tests
+ - rr_test.ps1   # isolated Round Robin test
 
 
 **Main automated tests (test.ps1)**
